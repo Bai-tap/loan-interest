@@ -1,7 +1,4 @@
 public class LoanInterest {
-    public static double caculateInterest(double loans, double interest_rate, double range) {
-        return loans * ((interest_rate + range) / 12);
-    }
 
     public static void main(String[] args) {
         double loans = 6000;
@@ -11,5 +8,19 @@ public class LoanInterest {
 
         double capital = loans / months;
         System.out.println("Principal pay in " + months + " months: " + capital);
+
+        range = 0;
+        double first_year_interest = caculateInterest(loans, interest_rate, range);
+        System.out.println("First year interest: " + first_year_interest);
+
+        range = 0.035;
+        double next_year_interest = caculateInterest(loans, interest_rate, range);
+        System.out.println("Next year interest: " + next_year_interest);
+
+
+    }
+
+    public static double caculateInterest(double loans, double interest_rate, double range) {
+        return loans * ((interest_rate + range) / 12);
     }
 }
