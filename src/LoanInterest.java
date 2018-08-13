@@ -17,7 +17,9 @@ public class LoanInterest {
         double next_year_interest = caculateInterest(loans, interest_rate, range);
         System.out.println("Next year interest: " + next_year_interest);
 
+        System.out.println("Monthly amount paid in the first year: " + (capital + first_year_interest));
 
+        System.out.println("Monthly amount paid in the next year: " + (capital + next_year_interest));
     }
 
     public static double caculateInterest(double loans, double interest_rate, double range) {
